@@ -1,5 +1,4 @@
 
-
 // Use the map method to solve these problems!
 
 /*
@@ -18,7 +17,8 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-    return arr.map(item => item.name)
+    const names = arr.map(item => item.name)
+    return names;
 }
 
 /*
@@ -31,8 +31,9 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return arr.map(item => Object.assign
-        (item, { isHungry: true }))
+    return arr.map(item => {
+        return { name: item.name, isHungry: true, type: item.type }
+    });
 }
 
 /*
@@ -45,7 +46,7 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return arr.map(item => { return { 'name': item.name.toUpperCase(), 'type': item.type } })
+    return arr.map(item => { return { name: item.name.toUpperCase(), type: item.type } });
 }
 
 
@@ -55,7 +56,7 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map(item => item.name + item.type);
 }
 
 /*
@@ -80,5 +81,7 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    // return arr.map(item {
+    //     const newArr = [];
+    // });
 }

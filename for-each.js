@@ -6,11 +6,12 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    const newArr = [];
-    arr.forEach(item => newArr.push(item.name));
-    return newArr;
+    const nameA = []
+    arr.forEach(item => {
+        nameA.push(item.name)
+    })
+    return nameA;
 }
-
 /*
 Output:
 ['cat', 'frog', 'dog', 'dog']
