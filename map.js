@@ -1,30 +1,28 @@
+
 // Use the map method to solve these problems!
 
 /*
 Input:
-
 [
     { name: 'spot', type: 'dog' },
     { name: 'rover', type: 'dog' },
     { name: 'jumpy', type: 'frog' },
     { name: 'einstein', type: 'cat' },
 ]
-
 */
 
 /*
 Output:
-
 ['spot', 'rover', 'jumpy', 'einstein']
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-    return [];
+    const names = arr.map(item => item.name)
+    return names;
 }
 
 /*
 Output:
-
 [
     { name: 'spot', isHungry: true, type: 'dog' },
     { name: 'rover', isHungry: true, type: 'dog' },
@@ -33,12 +31,13 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    return arr.map(item => {
+        return { name: item.name, isHungry: true, type: item.type }
+    });
 }
 
 /*
 Output:
-
 [
     { name: 'SPOT', type: 'dog' },
     { name: 'ROVER', type: 'dog' },
@@ -47,23 +46,21 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    return arr.map(item => { return { name: item.name.toUpperCase(), type: item.type } });
 }
 
 
 /*
-
 Output:
 ['spotdog', 'roverdog', 'jumpyfrog', einsteincat']
 */
 
 export function makeStringArray(arr) {
-    return [];
+    return arr.map(item => item.name + item.type);
 }
 
 /*
 Output:
-
 [
     [
         ['name', 'spot'], 
@@ -84,5 +81,7 @@ Output:
 */
 
 export function makeArrayOfArraysOfArrays(arr) {
-    return [];
+    // return arr.map(item {
+    //     const newArr = [];
+    // });
 }
